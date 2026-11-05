@@ -12,7 +12,7 @@ const letters=[['A','Apple','🍎'],['B','Ball','⚽'],['C','Cat','🐈'],['D','
 const $=id=>document.getElementById(id);let mode='letters',index=0,stars=0,answer='',questionText='',boardIndex=0,round=0;
 try{stars=Number(localStorage.getItem('buddyStars')||0)}catch(e){} updateStars();
 function updateStars(){ $('stars').textContent='⭐ '+stars+' stars';try{localStorage.setItem('buddyStars',String(stars))}catch(e){}}
-function reward(){stars++;updateStars()}
+function reward(){stars++;updateStars();let bike=document.querySelector('.bike-scene svg');if(bike){bike.style.transition='transform .5s ease';bike.style.transform='translateX(12px) rotate(-2deg)';setTimeout(()=>bike.style.transform='translateX(0) rotate(0)',500)}}
 function speak(s){if(!('speechSynthesis'in window))return; speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(s);u.rate=.78;u.pitch=1.08;u.lang='en-US';speechSynthesis.speak(u)}
 function view(id){['welcome','lesson','game','board','colors','counting'].forEach(x=>$(x).classList.toggle('hidden',x!==id))}
 function showHome(){if('speechSynthesis'in window)speechSynthesis.cancel();view('welcome')}
