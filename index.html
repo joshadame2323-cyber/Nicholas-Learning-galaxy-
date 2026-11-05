@@ -7,7 +7,7 @@
   document.getElementById('launch').classList.add('hidden');
   welcomeAudio.currentTime=0;
 welcomeAudio.play().catch(console.error);}
-const welcomeAudio = new Audio("Youthful-Enthusiast-Male-2026-11-04-15-16-Hey-Nicholas!-Are-you-ready-to-learn-Woohoo!-Let.mp3");
+const welcomeAudio = new Audio("My%20Voice.mp3");
 const letters=[['A','Apple','🍎'],['B','Ball','⚽'],['C','Cat','🐈'],['D','Dog','🐕'],['E','Elephant','🐘'],['F','Frog','🐸'],['G','Giraffe','🦒'],['H','Horse','🐎'],['I','Iguana','🦎'],['J','Jeep','🚙'],['K','Kite','🪁'],['L','Leaf','🍃'],['M','Monkey','🐒'],['N','Necklace','📿'],['O','Owl','🦉'],['P','Plane','✈️'],['Q','Quilt','🧵'],['R','Rainbow','🌈'],['S','Star','⭐'],['T','Taxi','🚕'],['U','Umbrella','☂️'],['V','Van','🚐'],['W','Watch','⌚'],['X','X-Ray','🩻'],['Y','Yak','🐂'],['Z','Zip','🤐']];
 const $=id=>document.getElementById(id);let mode='letters',index=0,stars=0,answer='',questionText='',boardIndex=0,round=0;
 try{stars=Number(localStorage.getItem('buddyStars')||0)}catch(e){} updateStars();
